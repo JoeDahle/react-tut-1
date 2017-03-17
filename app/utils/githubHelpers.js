@@ -42,7 +42,7 @@ function calcScores(player){
 
 var helpers = {
   getPlayersInfo: function(players){
-    return axios.all(player.map(function(username){
+    return axios.all(players.map(function(username){
       return getUserInfo(username)
     })).then(function(info){
       return info.map(function(user){
